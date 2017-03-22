@@ -287,13 +287,24 @@
 
                 })
 		
-				$(".clickme").bind("click",function(){
-				
-					for (i = 4; i < (translatedLangArr.length); i++) { 
-						navigator.notification.alert(translatedLangArr[i]);
-					}
-
+				$(".clickme").bind("click",function(){			
+						alertWithCallback(translatedLangArr,4)
 				})
+				
+				function alertWithCallback(translatedLangArr,start){
+					if(translatedLangArr.length > start){
+						navigator.notification.prompt(
+							translatedLangArr[start],  // message
+							function(){
+								start++
+								alertWithCallback(translatedLangArr[start],start)
+							},     // callback to invoke
+							'^o^',            // title
+							['Ok'],             // buttonLabels
+							''
+						);
+					}
+				}
 				
 				$(".personNum").bind("change",function(){
 					var dollorPerPeopleResult = parseFloat($(".moneyNum").val()) / parseFloat($(".personNum").val())
