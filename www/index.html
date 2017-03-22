@@ -293,15 +293,15 @@
 				
 				function alertWithCallback(translatedLangArr,start){
 					if(translatedLangArr.length > start){
-						navigator.notification.prompt(
+						navigator.notification.alert(
 							translatedLangArr[start],  // message
 							function(){
 								start++
-								alertWithCallback(translatedLangArr[start],start)
+								alertWithCallback(translatedLangArr,start)
 							},     // callback to invoke
 							'^o^',            // title
-							['Ok'],             // buttonLabels
-							''
+							['Ok']             // buttonLabels
+							
 						);
 					}
 				}
