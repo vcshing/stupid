@@ -113,7 +113,9 @@
             </div>
 
         </div>
-
+		<div style="display:none" class="hiddenDiv">
+		
+		</div>
         <script>
             var IntervalVibrate = "";
         </script>
@@ -124,22 +126,148 @@
         <script>
 
             var lang
-			var	defaultLangArr = {
-				0 	:	"Other Apps",
-				1	:	"I WANT TO TELL YOU",
-				2	:	"Default Language",
-				3	:	"Click Me",
-				4	:	"Amounts",
-				5	:	"Amounts",
-				6	:	"Numbers of People",
-				7	:	"Numbers of People ",
-				8	:	"Payment Details",
-				9	:	"Payment Per Person",
-				10	:	"Personal Returns",
-				11	:	"Your Payment Money",
-				12	:	"Your Payment Money",
-				13	:	"Money Amount Returns"
-			}
+			var	defaultLangArr = []
+			var	defaultLangArr2 = []
+
+			defaultLangArr.push("其他應用");
+			defaultLangArr.push("我想告訴你");
+			defaultLangArr.push("預設語言");
+			defaultLangArr.push("點擊我");
+				defaultLangArr.push("節日快樂！4月1日的英雄！");
+				defaultLangArr.push(" 你是怎麼進來的？？");
+				defaultLangArr.push("你是怎樣知道這麼帥的網站的？");
+				defaultLangArr.push("哪位帥哥介紹的嗎？？");
+				defaultLangArr.push("哈哈呵呵");
+				defaultLangArr.push("你被他騙了！");
+				defaultLangArr.push("別難過了~~~");
+				defaultLangArr.push("他或許是和你開玩笑的");
+				defaultLangArr.push("但是玩笑開過頭了");
+				defaultLangArr.push("竟然把你帶到這個地方");
+				defaultLangArr.push("哎，真是的！");
+				defaultLangArr.push("你回去扁他一頓就行了");
+				defaultLangArr.push("對了，你談戀愛沒有？？");
+				defaultLangArr.push("如果有的話，千萬要把這個網址給他（她）！");
+				defaultLangArr.push("說不定.....。。。");
+				defaultLangArr.push("會把你......！");
+				defaultLangArr.push("送進？");
+				defaultLangArr.push("婚姻的墳墓！");
+				defaultLangArr.push("也許吧！");
+				defaultLangArr.push("也可能會.....");
+				defaultLangArr.push("痛扁你一頓，然後再........");
+				defaultLangArr.push("說再見！");
+				defaultLangArr.push("哎呀！你哭了?!");
+				defaultLangArr.push("早知道你會這樣，我就不和你玩了！");
+				defaultLangArr.push("什麼？不行？");
+				defaultLangArr.push("別這樣嘛！");
+				defaultLangArr.push("我給你講個故事行嗎？");
+				defaultLangArr.push("從前有個山");
+				defaultLangArr.push("山上有個廟");
+				defaultLangArr.push("廟裡有個老和尚有個小和尚");
+				defaultLangArr.push("老和尚正在給小和尚講故事");
+				defaultLangArr.push("從前有個山");
+				defaultLangArr.push("山上有個廟。。。。");
+				defaultLangArr.push("別罵我呀？");
+				defaultLangArr.push("你不願聽這個我給你換一個");
+				defaultLangArr.push("從前有個山");
+				defaultLangArr.push("山上有個庵");
+				defaultLangArr.push("庵里有個老尼姑有個小尼姑");
+				defaultLangArr.push("老尼姑。。。哎呦別打了，我換一個！");
+				defaultLangArr.push("講個好聽的");
+				defaultLangArr.push("仔細聽啊");
+				defaultLangArr.push("從前有個山");
+				defaultLangArr.push("呵呵，先別打，和那個不一樣！");
+				defaultLangArr.push("山上有個廟");
+				defaultLangArr.push("哎呦，聽我講完！");
+				defaultLangArr.push("廟裡有個缸");
+				defaultLangArr.push("不一樣了吧");
+				defaultLangArr.push("缸裡有個瓢");
+				defaultLangArr.push("瓢裡有個碗");
+				defaultLangArr.push("碗裡有個勺");
+				defaultLangArr.push("勺裡有塊肉");
+				defaultLangArr.push("我吃了你饞了");
+				defaultLangArr.push("我的故事講完了！");
+				defaultLangArr.push("好不好？");
+				defaultLangArr.push("什麼？還想听？");
+				defaultLangArr.push("那好，我再來一個！");
+				defaultLangArr.push("從前");
+				defaultLangArr.push("有一個小孩牽個羊");
+				defaultLangArr.push("我的故事就這麼長");
+				defaultLangArr.push("你不願意聽是嗎？");
+				defaultLangArr.push("那怎麼辦？");
+				defaultLangArr.push("你已經出不去了");
+				defaultLangArr.push("還是關掉電腦來的干脆");
+				defaultLangArr.push("試試吧");
+				defaultLangArr.push("還是不願關？");
+				defaultLangArr.push("那我再給你講故事！");
+				defaultLangArr.push("哎哎，別哭嘛！");
+				defaultLangArr.push("哭的我挺傷心的");
+				defaultLangArr.push("你真的出不去了");
+				defaultLangArr.push("你還不洩氣？");
+				defaultLangArr.push("我佩服你這種精神！");
+				defaultLangArr.push("你堅持這麼久一定很急了");
+				defaultLangArr.push("你還真能堅持！");
+				defaultLangArr.push("你一定知道“堅持就是勝利”");
+				defaultLangArr.push("對不對？");
+				defaultLangArr.push("如果你有這種精神的話---");
+				defaultLangArr.push("你一定會成功的！");
+				defaultLangArr.push("相信我");
+				defaultLangArr.push("你快看到希望了");
+				defaultLangArr.push("我不騙你");
+				defaultLangArr.push("真的！");
+				defaultLangArr.push("你馬上就會找到出口的");
+				defaultLangArr.push("多虧你堅持了下來");
+				defaultLangArr.push("要不，關了機子多不好！");
+				defaultLangArr.push("是不是？");
+				defaultLangArr.push("對不對？");
+				defaultLangArr.push("餵！給你說點正事！");
+				defaultLangArr.push("一個人受騙是不是很難受？");
+				defaultLangArr.push("想不想讓別人替你分擔一下？");
+				defaultLangArr.push("我的意思是----");
+				defaultLangArr.push("把你的朋友叫過來！");
+				defaultLangArr.push("讓他也受騙");
+				defaultLangArr.push("你就在一旁哈哈大笑~~~");
+				defaultLangArr.push("好不好？");
+				defaultLangArr.push("什麼？出賣朋友的事你不干？");
+				defaultLangArr.push("你真是好人！");
+				defaultLangArr.push("我太感動了！");
+				defaultLangArr.push("嗚嗚~~~~~~");
+				defaultLangArr2.push("也好，我從不難為好人！");
+				defaultLangArr2.push("我決定----");
+				defaultLangArr2.push("讓好人多在我身邊一會！");
+				defaultLangArr2.push("你願不願意？");
+				defaultLangArr2.push("怎麼還不願意？");
+				defaultLangArr2.push("那好，我馬上讓你出去！");
+				defaultLangArr2.push("別著急！");
+				defaultLangArr2.push("你只需再點100000下就可以了！");
+				defaultLangArr2.push("開個玩笑");
+				defaultLangArr2.push("不要生氣");
+				defaultLangArr2.push("人生就像一場戲");
+				defaultLangArr2.push("因為有緣才相聚");
+				defaultLangArr2.push("相扶到老不容易");
+				defaultLangArr2.push("是否更該去珍惜");
+				defaultLangArr2.push("他人生氣我不氣");
+				defaultLangArr2.push("氣出病來無人替");
+				defaultLangArr2.push("我說的對不對？");
+				defaultLangArr2.push("好了");
+				defaultLangArr2.push("玩笑也開過了");
+				defaultLangArr2.push("該說的也說了");
+				defaultLangArr2.push("該放你出去了！");
+				defaultLangArr2.push("高興了吧");
+				defaultLangArr2.push("最後提醒你一下");
+				defaultLangArr2.push("永遠不要忘記自己是中國人！");
+				defaultLangArr2.push("跟我宣誓！");
+				defaultLangArr2.push("聽見沒有？跟我宣誓！");
+				defaultLangArr2.push("我是一個中國人！");
+				defaultLangArr2.push("我永遠不背叛祖國！！");
+				defaultLangArr2.push("誓與一切反對祖國統一的勢力鬥爭到底！！！");
+				defaultLangArr2.push("全心全意為人民服務！");
+				defaultLangArr2.push("好好學習天天向上");
+				defaultLangArr2.push("為把我國建設成為富強民主文明的社會主義現代化國家而奮鬥！");
+				defaultLangArr2.push("還有！");
+				defaultLangArr2.push("不要忘記發給你的朋友！記住了！！！！");
+				defaultLangArr2.push("天異網絡祝賀：您終於出來了！恭喜恭喜！");
+				defaultLangArr2.push("愚人節快樂！");
+				
 			var translatedLangArr = defaultLangArr;
 			var cookie = storageManager.getCookie();
             $(function() {
@@ -158,9 +286,13 @@
                     window.open(url, target, options);
 
                 })
-				
+		
 				$(".clickme").bind("click",function(){
-					navigator.notification.alert(1);
+				
+					for (i = 4; i < (translatedLangArr.length); i++) { 
+						navigator.notification.alert(translatedLangArr[i]);
+					}
+
 				})
 				
 				$(".personNum").bind("change",function(){
@@ -183,7 +315,7 @@
 				})
 				
 				$(".shareApp").bind("click",function(e){
-					window.plugins.socialsharing.share("Checkout Dollor Count", "It is Awesome", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.moneycalc");
+					window.plugins.socialsharing.share("I Want to Tell You", "I Want to Tell You", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.tellyou");
 				})
             })
 
@@ -192,6 +324,7 @@
                 if (typeof(callback) != "function") {
                     callback = function() {};
                 }
+				
                 $.ajax({
                     type: "post",
                     url: "http://gogogo.synology.me/googletranslate/translate.php",
@@ -201,6 +334,7 @@
                     },
                     dataType: "json",
                     success: function(response) {
+					console.log(response);
 					//debugger;
 						var translatedText = response["data"]["translations"][0]["translatedText"]
 					//	translatedText = translatedText.replace(/“/g,'"');
@@ -274,36 +408,52 @@
 				}
 				
 				var defaultLangArrToWord= "";
+				
 				$.each(defaultLangArr,function(a,b){
-					defaultLangArrToWord += ("{{" + b +"}}");
+					defaultLangArrToWord += ("[[" + b +"]]");
+					
 				})
-			
+				translatedLangArr=[];
+				
 				translate(defaultLangArrToWord,lang,function(translatedText){
+				
+				//	console.log(translatedText);
 				//debugger;
 					//translatedText = translatedText.replace(/\] \[/g,'][');
 					//translatedText = translatedText.replace(/\[ \[/g,'[[');
 					//translatedText = translatedText.replace(/【/g,'');
 					//translatedText = translatedText.replace(/、/g,'');
 				//	[[他のアプリ]] [[[お支払いの詳細]]、[[マネー量]]、[[マネー量]]、[[ピープル番号]] [[ピープル番号]] [] [お支払いの詳細] [[チェックアウトマネー]カウント]を] [[個人戻る]]、[[お支払マネー]]、[[お支払マネー] [一人当たりの支払]]、[[マネー額戻ります]]
-					translatedText=translatedText.match(/[^[\{\}]+/gm);
+					translatedText=translatedText.match(/[^[\[\]]+/gm);
 					//debugger
-					translatedLangArr=[];
+					
 					$.each(translatedText,function(a,b){
 						if( b != "" && b != " "){
 							translatedLangArr.push(b);
 						}
 					})
-				
-					$(".word").each(function(a,b){
-						if($(this).html()!="" && $(this).html()!="undefined"){
-							$(this).html(translatedLangArr[a]);					
-						}else if($(this).attr("placeholder")!="" && $(this).attr("placeholder")!="undefined"){
+					
+					translate(defaultLangArrToWord,lang,function(translatedText2){		
+						translatedText2=translatedText.match(/[^[\[\]]+/gm);
+	
+						$.each(translatedText2,function(a,b){
+							if( b != "" && b != " "){
+								translatedLangArr.push(b);
+							}
+						})
+						$(".word").each(function(a,b){
 						
-							$(this).attr("placeholder",translatedLangArr[a]);	
-						}
-					})
-				
+							if($(this).html()!="" && $(this).html()!="undefined"){
+								$(this).html(translatedLangArr[a]);					
+							}else if($(this).attr("placeholder")!="" && $(this).attr("placeholder")!="undefined"){
+								$(this).attr("placeholder",translatedLangArr[a]);	
+							}
+						})
+					});					
 				})
+				
+				
+				
 
             }
 
