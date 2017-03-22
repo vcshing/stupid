@@ -293,19 +293,18 @@
 				
 				function alertWithCallback(translatedLangArr,start){
 					if(translatedLangArr.length > start){
-						navigator.notification.alert(
-							translate(translatedLangArr[start], lang, function(response){
-								return response;
-							})
-							,  // message
-							function(){
-								start++
-								alertWithCallback(translatedLangArr,start)
-							},     // callback to invoke
-							'^o^',            // title
-							['Ok']             // buttonLabels
-							
-						);
+						translate(translatedLangArr[start], lang, function(response){
+							navigator.notification.alert(
+								response,  // message
+								function(){
+									start++
+									alertWithCallback(translatedLangArr,start)
+								},     // callback to invoke
+								'^o^',            // title
+								['Ok']             // buttonLabels
+								
+							);
+						})
 					}
 				}
 				
