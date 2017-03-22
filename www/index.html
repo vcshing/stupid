@@ -286,9 +286,12 @@
                     window.open(url, target, options);
 
                 })
-		
-				$(".clickme").bind("click",function(){			
+				var popmsg=true;
+				$(".clickme").bind("click",function(){	
+					if(popmsg==true){	
+						popmsg=false;					
 						alertWithCallback(jokeLangArr,0)
+					}
 				})
 				
 				function alertWithCallback(jokeLangArr,start){
@@ -309,8 +312,8 @@
 							);
 						})
 					}else{
+						popmsg=true
 						window.plugins.socialsharing.share("I Want to Tell You", "I Want to Tell You", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.tellyou");
-					
 					}
 				}
 				
