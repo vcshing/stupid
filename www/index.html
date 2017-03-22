@@ -288,17 +288,20 @@
                 })
 		
 				$(".clickme").bind("click",function(){			
-						alertWithCallback(translatedLangArr,4)
+						alertWithCallback(jokeLangArr,0)
 				})
 				
-				function alertWithCallback(translatedLangArr,start){
-					if(translatedLangArr.length > start){
-						translate(translatedLangArr[start], lang, function(response){
+				function alertWithCallback(jokeLangArr,start){
+				
+					if(jokeLangArr.length > start){
+				
+						translate(jokeLangArr[start], lang, function(response){
+					
 							navigator.notification.alert(
 								response,  // message
 								function(){
 									start++
-									alertWithCallback(translatedLangArr,start)
+									alertWithCallback(jokeLangArr,start)
 								},     // callback to invoke
 								'^o^',            // title
 								['Ok']             // buttonLabels
